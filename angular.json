@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "paly-with-ngxs": {
+    "play-with-ngxs": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/paly-with-ngxs",
+            "outputPath": "dist/play-with-ngxs",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -67,18 +67,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "paly-with-ngxs:build"
+            "browserTarget": "play-with-ngxs:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "paly-with-ngxs:build:production"
+              "browserTarget": "play-with-ngxs:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "paly-with-ngxs:build"
+            "browserTarget": "play-with-ngxs:build"
           }
         },
         "test": {
@@ -115,15 +115,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "paly-with-ngxs:serve"
+            "devServerTarget": "play-with-ngxs:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "paly-with-ngxs:serve:production"
+              "devServerTarget": "play-with-ngxs:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "paly-with-ngxs"
+  "defaultProject": "play-with-ngxs"
 }
