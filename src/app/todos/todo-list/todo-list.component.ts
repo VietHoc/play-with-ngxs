@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {Select} from '@ngxs/store';
+import {Select, Store} from '@ngxs/store';
 import {Observable} from 'rxjs';
+import {FetchTodos} from '../stores/todo-actions';
 
 @Component({
   selector: 'app-todo-list',
@@ -10,7 +11,9 @@ import {Observable} from 'rxjs';
 export class TodoListComponent implements OnInit {
   @Select((state) => state.todo.todos) todos$: Observable<any>;
 
-  constructor() {}
+  constructor(private store: Store) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.store.dispatch(new FetchTodos());
+  }
 }
